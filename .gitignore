@@ -37,3 +37,4 @@ lerna-debug.log*
 # 
 /superformula/dist
 /superformula/node_modules
+_db/

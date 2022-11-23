@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:12'
+    container_name: rahove_superformula
+    restart: always
+    ports:
+      - '15432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: superformula
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./_db:/var/lib/postgresql/data
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
